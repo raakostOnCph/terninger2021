@@ -4,13 +4,15 @@ public class Main {
 	// write your code here
 
 
-        Bæger bæger = new Bæger(10);
+        Bæger bæger = new Bæger(1000);
 
         bæger.slå();
 
         bæger.kig();
 
         bæger.sorter();
+
+        bæger.histogram(bæger.getTerningniger());
 
       //  System.out.println("summen " + bæger.sum());
 

@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 
 public class Bæger
@@ -13,6 +10,16 @@ public class Bæger
      private List<Terning> fjernedeTerninger = new ArrayList<>();
 
 
+
+    public List<Terning> getTerningniger()
+    {
+        return terningniger;
+    }
+
+    public List<Terning> getFjernedeTerninger()
+    {
+        return fjernedeTerninger;
+    }
 
 
 
@@ -156,6 +163,39 @@ public class Bæger
         Collections.sort(terningniger);
 
         kig();
+
+    }
+
+    public void histogram(List<Terning> terningList ) {
+
+
+        int temp =0;
+        Map<Integer, Integer> histogram = new TreeMap<>();
+
+
+        for (Terning terning : terningList) {
+
+            if ( ! histogram.containsKey(terning.getSlag())) {
+
+                histogram.put(terning.getSlag(),1);
+
+            }
+            else {
+
+              temp = histogram.get(terning.getSlag()) + 1;
+
+              histogram.put(terning.getSlag(),temp);
+            }
+        }
+
+        System.out.println("\n");
+
+        for (Integer key : histogram.keySet()) {
+
+            System.out.println(key + " : " + histogram.get(key));
+        }
+
+
 
 
     }
