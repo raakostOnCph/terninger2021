@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
@@ -60,6 +61,8 @@ public class Bæger
 
     public void kig()
     {
+
+        System.out.println("\n");
 
         for (Terning terning : terningniger) {
 
@@ -148,6 +151,14 @@ public class Bæger
 //    }
 
 
+    public void sorter() {
+
+        Collections.sort(terningniger);
+
+        kig();
+
+
+    }
 
     
 }

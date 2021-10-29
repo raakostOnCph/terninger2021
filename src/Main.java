@@ -10,12 +10,14 @@ public class Main {
 
         bæger.kig();
 
+        bæger.sorter();
+
       //  System.out.println("summen " + bæger.sum());
 
 //        bæger.fjern(Input.getTal("fjern : "));
 
-        System.out.println("\n");
-        bæger.filter(Input.getTal("filtrer : "));
+//        System.out.println("\n");
+//        bæger.filter(Input.getTal("filtrer : "));
 
     }
 

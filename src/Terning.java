@@ -1,6 +1,7 @@
 import java.util.Random;
+import java.util.function.Predicate;
 
-public class Terning
+public class Terning implements Comparable<Terning>
 {
 
     private int slag = 0;
@@ -33,4 +34,11 @@ public class Terning
     }
 
 
+    @Override
+    public int compareTo(Terning o)
+    {
+
+        return this.getSlag() - o.getSlag() ;
+
+    }
 }
