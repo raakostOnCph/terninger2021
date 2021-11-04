@@ -4,6 +4,8 @@ import java.util.function.Predicate;
 public class Terning implements Comparable<Terning>
 {
 
+    Person person = new Person("noller",55,44 );
+
     private int slag = 0;
 
     int sideantal;
@@ -40,5 +42,11 @@ public class Terning implements Comparable<Terning>
 
         return this.getSlag() - o.getSlag() ;
 
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Sideantal " + sideantal + " slag " + getSlag();
     }
 }
